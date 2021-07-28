@@ -1,0 +1,263 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, san-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    padding: 0 100px;
+}
+
+.header__left-block {
+    display: flex;
+    justify-content: space-between;
+    min-width: 550px;
+}
+
+.header__logo {
+    max-width: 170px;
+}
+
+.header__logo img {
+    width: 100%;
+}
+
+.header__links {
+    display: flex;
+    align-items: center;
+}
+
+.header__link {
+    position: relative;
+    font-weight: 700;
+    font-size: 18px;
+    color: #303030;
+}
+
+.header__link:not(:last-child) {
+    margin-right: 45px;
+}
+
+.header__link:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 110%;
+    height: 8px;
+    left: -5%;
+    bottom: -1px;
+    z-index: -1;
+    background: #54ed39;
+}
+
+
+.btn {
+    width: 220px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s all;
+    outline: 0;
+}
+
+.btn:hover {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .3)
+}
+
+.sidepanel {
+    position: fixed;
+    left: 60px;
+    top: 240px;
+    height: 400px;
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidepanel__text {
+    width: 120px;
+    height: 120px;
+    font-size: 14px;
+}
+
+.sidepanel__text span {
+    display: flex;
+    transform: rotate(-90deg) translateX(-50px);
+}
+
+.sidepanel__divider {
+    width: 1px;
+    height: 165px;
+    background-color: #000;
+}
+
+.sidepanel__icon {
+    width: 24px;
+    height: 24px;
+}
+
+.sidepanel__icon img {
+    width: 100%;
+}
+
+.preview {
+    position: relative;
+    padding: 28px 0 100px 0;
+}
+
+.preview__life {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 35px 0 0 35px;
+}
+
+.bgc__blue {
+    position: absolute;
+    right: 0;
+    top: -155px;
+    width: 50vw;
+    height: 900px;
+    background: rgba(146, 242, 255, 0.15);
+    z-index: -1;
+}
+
+.tab__container {
+    display: flex;
+    width: 1130px;
+    margin: 0 auto;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+.tab__content {
+    position: relative;
+    width: 850px;
+}
+
+.tab__content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tab__content-descr {
+    position: absolute;
+    top: 300px;
+    right: -177px;
+    width: 550px;
+    height: 360px;
+    padding: 50px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+    background: rgba(251, 254, 93, 0.8);
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.tab__header {
+    width: 280px;
+    padding: 35px 30px;
+    background-color: #fff;
+}
+
+.tab__header h3 {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.tab__header-items {
+    margin-top: 35px;
+    padding-left: 26px;
+    border-left: 1px solid #000;
+}
+
+.tab__header-item {
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.tab__header-item--active {
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.footer {
+    min-height: 180px;
+    background-color: #303030;
+    padding: 45px 0 50px 0;
+    color: #fff;
+}
+
+.footer .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer .subtitle {
+    font-size: 20px;
+}
+
+.footer .link {
+    display: block;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.footer .call {
+    text-align: right;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
